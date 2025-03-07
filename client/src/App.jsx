@@ -2,6 +2,7 @@ import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import './App.css'
 import EditorPage from './EditorPage'
 import RegisterPage from './RegisterPage';
+import LoginPage from './LoginPage';
 
 function App() {
 
@@ -9,12 +10,20 @@ function App() {
 
   const router = createBrowserRouter([
     {
+      path: '/login',
+      element: <><LoginPage /></>
+    },
+    {
       path: '/register',
       element: <><RegisterPage /></>
     },
     {
       path: '/document/:id',
       element: <>{isAuthenticated ? <EditorPage /> : <Navigate to="/login" />}</>
+    },
+    {
+      path: '/document/:id',
+      element: <><EditorPage /></>
     },
     {
       path: '*',
