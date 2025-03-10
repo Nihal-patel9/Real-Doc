@@ -3,6 +3,7 @@ import './App.css'
 import EditorPage from './EditorPage'
 import RegisterPage from './RegisterPage';
 import LoginPage from './LoginPage';
+import LandingPage from './LandingPage';
 
 function App() {
 
@@ -16,6 +17,10 @@ function App() {
     {
       path: '/register',
       element: <><RegisterPage /></>
+    },
+    {
+      path: '/',
+      element: <><LandingPage /></>
     },
     {
       path: '/document/:id',
