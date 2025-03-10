@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken');
+const env = require('dotenv').config()
 
 mongoose.connect('mongodb://localhost:27017/RealDoc', {
     useNewUrlParser: true,
@@ -130,7 +131,7 @@ app.post('/user/login', async (req, res) => {
 
 
 
-const port = 5000
+const port = process.env.PORT || 5000
 server.listen(port, () => {
     console.log(`server running on port : ${port}`)
 })
