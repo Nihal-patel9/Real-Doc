@@ -10,10 +10,12 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken');
 const env = require('dotenv').config()
 
-mongoose.connect('mongodb://localhost:27017/RealDoc', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-});
+mongoose.connect('mongodb://localhost:27017/RealDoc',)
+
+// {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// });
 
 const documentRoutes = require('./routes/documents');
 const userRoutes = require('./routes/user');
